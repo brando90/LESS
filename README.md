@@ -18,6 +18,8 @@ This repo contains the code for our ICML 2024  paper [LESS: Selecting Influentia
 
 
 ## Install Requirements
+TIP: for now avoid skampere1 on snap!
+
 **Step 0**: Conda Env & git clone repo
 ```bash
 # Clone repo
