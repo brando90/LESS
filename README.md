@@ -18,20 +18,43 @@ This repo contains the code for our ICML 2024  paper [LESS: Selecting Influentia
 
 
 ## Install Requirements
-**Step 1**: To get started with this repository, you'll need to follow these installation steps. Before proceeding, make sure you have [Pytorch](https://pytorch.org/get-started/previous-versions/) installed. 
+**Step 0**: Conda Env & git clone repo
+```bash
+# Clone repo
+git clone git@github.com:brando90/LESS.git
+
+# Create conda env
+conda create -n less python=3.11 -y
+conda activate less
+conda activate less
+
+# Won't work, you did pytorch first, see bellow
+# pip install -e ~/LESS
 ```
+
+**Step 1**: To get started with this repository, you'll need to follow these installation steps. Before proceeding, make sure you have [Pytorch](https://pytorch.org/get-started/previous-versions/) installed. 
+```bash
 pip3 install torch==2.1.2 torchvision torchaudio
+# pip3 install torch==2.2.1 torchvision torchaudio
+pip uninstall -y torch torchvision torchaudio
 ```
 
 **Step 2**: Then install the rest of the required packages:
-```
+```bash
 cd LESS
-pip install -r requirement.txt
+# pip install -r requirement.txt
+
+pip install peft==0.7.1
+pip install transformers==4.36.2
+
+# pip install numpy==1.24.4
+pip install traker[fast]==0.1.3
 ```
 
 **Step 3**: Finally, install the `less` package in editable mode to make it accessible for your development environment:
-```
-pip install -e .
+```bash
+# pip install -e
+pip install -e ~/LESS
 ```
 
 
